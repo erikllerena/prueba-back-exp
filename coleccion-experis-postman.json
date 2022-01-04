@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "0e361bf0-9a4e-4e5d-a2b0-7e7347a4ff00",
+		"name": "Coleccion - Experis - Prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "18.224.110.206:8090/status",
+					"host": [
+						"18",
+						"224",
+						"110",
+						"206"
+					],
+					"port": "8090",
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Api token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "abcdef",
+						"type": "text"
+					},
+					{
+						"key": "clientSecret",
+						"value": "Erik",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "18.224.110.206:8090/token",
+					"host": [
+						"18",
+						"224",
+						"110",
+						"206"
+					],
+					"port": "8090",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Api client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "18.224.110.206:8090/client?clientId=abcdef&clientSecret=Erik",
+					"host": [
+						"18",
+						"224",
+						"110",
+						"206"
+					],
+					"port": "8090",
+					"path": [
+						"client"
+					],
+					"query": [
+						{
+							"key": "clientId",
+							"value": "abcdef"
+						},
+						{
+							"key": "clientSecret",
+							"value": "Erik"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Api Introspect",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "G4SoHUrpMD6iw5ltnq6reR",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "18.224.110.206:8090/introspect",
+					"host": [
+						"18",
+						"224",
+						"110",
+						"206"
+					],
+					"port": "8090",
+					"path": [
+						"introspect"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

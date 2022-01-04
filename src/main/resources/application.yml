@@ -1,0 +1,35 @@
+spring:  
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  datasource:
+        platform: mysql
+        url: jdbc:mysql://database-prueba-exp.cqmkmeyhydnm.us-east-2.rds.amazonaws.com:3306/db_prueba
+        username: mysql_admin
+        password: system123      
+        driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+        database: mysql
+        show-sql: true
+        hibernate:
+          ddl-auto: none        
+        properties:
+          hibernate:
+            enable_lazy_load_no_trans: true
+            jdbc:
+              lob:
+                non_contextual_creation: true
+            proc:
+              param_null_passing: true  
+server:
+    port: 8090
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE   
